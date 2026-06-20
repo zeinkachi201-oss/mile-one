@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "RunClub",
+    "slug": "runclub",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#FF6B35"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.runclub.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "RunClub needs your location to track your runs.",
+        "NSLocationAlwaysUsageDescription": "RunClub uses your location to track runs in the background."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FF6B35"
+      },
+      "package": "com.runclub.app",
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_BACKGROUND_LOCATION"]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow RunClub to use your location."
+        }
+      ]
+    ],
+    "scheme": "runclub"
+  }
+}
