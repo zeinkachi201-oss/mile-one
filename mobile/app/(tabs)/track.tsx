@@ -81,7 +81,7 @@ export default function Track() {
     if (timer.current) clearInterval(timer.current);
   }, []);
 
-  const pace = distance > 0 ? elapsed / 60 / distance : 0;
+  const pace = distance > 0.05 ? elapsed / 60 / distance : 0;
 
   return (
     <SafeAreaView style={s.container}>
@@ -105,7 +105,7 @@ export default function Track() {
         {[
           { value: distance.toFixed(2), label: 'km' },
           { value: formatTime(elapsed), label: 'time' },
-          { value: distance > 0 ? pace.toFixed(1) : '--', label: 'min/km' },
+          { value: pace > 0 ? pace.toFixed(1) : '--', label: 'min/km' },
         ].map((stat) => (
           <View key={stat.label} style={s.stat}>
             <Text style={[s.statValue, running && { color: colors.brand }]}>{stat.value}</Text>

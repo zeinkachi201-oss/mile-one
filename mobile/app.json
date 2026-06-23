@@ -1,27 +1,27 @@
 {
   "expo": {
-    "name": "RunClub",
-    "slug": "runclub",
+    "name": "Mile One",
+    "slug": "mile-one",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "splash": {
       "resizeMode": "contain",
-      "backgroundColor": "#FF6B35"
+      "backgroundColor": "#6366F1"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.runclub.app",
+      "bundleIdentifier": "com.mileone.app",
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "RunClub needs your location to track your runs.",
-        "NSLocationAlwaysUsageDescription": "RunClub uses your location to track runs in the background."
+        "NSLocationWhenInUseUsageDescription": "Mile One needs your location to track your runs.",
+        "NSLocationAlwaysUsageDescription": "Mile One uses your location to track runs in the background."
       }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#FF6B35"
+        "backgroundColor": "#6366F1"
       },
-      "package": "com.runclub.app",
+      "package": "com.mileone.app",
       "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_BACKGROUND_LOCATION"]
     },
     "plugins": [
@@ -29,10 +29,10 @@
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "Allow RunClub to use your location."
+          "locationAlwaysAndWhenInUsePermission": "Allow Mile One to use your location."
         }
       ]
     ],
-    "scheme": "runclub"
+    "scheme": "mileone"
   }
 }

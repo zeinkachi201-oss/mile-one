@@ -149,7 +149,7 @@ export default function RunPage() {
     };
   }, []);
 
-  const pace = distance > 0 ? elapsed / 60 / distance : 0;
+  const pace = distance > 0.05 ? elapsed / 60 / distance : 0;
 
   return (
     <div>
@@ -171,7 +171,7 @@ export default function RunPage() {
         {[
           { label: 'Distance', value: `${distance.toFixed(2)} km` },
           { label: 'Time', value: formatTime(elapsed) },
-          { label: 'Pace', value: distance > 0 ? `${pace.toFixed(1)} min/km` : '--' },
+          { label: 'Pace', value: pace > 0 ? `${pace.toFixed(1)} min/km` : '--' },
         ].map((s) => (
           <div key={s.label} className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-center">
             <p className={`text-2xl font-extrabold ${running ? 'text-brand' : 'text-gray-400'}`}>{s.value}</p>

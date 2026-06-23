@@ -17,7 +17,7 @@ router.post('/start', auth, async (req, res) => {
 
 router.patch('/:id/end', auth, async (req, res) => {
   const { distance, duration, route } = req.body;
-  const pace = duration && distance ? (duration / 60) / distance : null;
+  const pace = duration && distance > 0.05 ? (duration / 60) / distance : null;
   try {
     const { rows } = await db.query(
       `UPDATE runs SET distance=$1, duration=$2, pace=$3, route=$4, ended_at=NOW()
